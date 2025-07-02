@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <img src="./asstes/lOGO (4).png" alt="">
+
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="#">Properties</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <button class="contact-btn btn1">Contact now</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+
+        </ul>
+        <button class="contact-btn">Contact now</button>
+    </div>
+
+    <!-- Carousel Container -->
+    <section class="carousel-container">
+        <!-- Slide 1 -->
+        <div class="carousel-slide slide-1 active">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h1 data-aos="fade-right" data-aos-delay="0" data-aos-duration="800"
+                                    style="width: 681px;">Finding Your New <br> Home Is Simple</h1>
+                                <p data-aos="fade-right" data-aos-delay="150" data-aos-duration="800">
+                                    Lorem ipsum dolor sit amet consectetur. Vitae tempus <br> diam risus est morbi
+                                    senectus
+                                    at tristique duis. <br> Sit morbi risus pellentesque arcu. Bibendum malesuada <br>
+                                    aenean
+                                    risus gravida scelerisque ornare. Purus.
+                                </p>
+                                <button class="cta-btn">Contact Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide slide-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h1 style="width: 681px;">Elevate Your <br> Perfect Lifestyle <br> with PlotLand.</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur . Vitae tempus <br> diam risus est morbi
+                                    senectus
+                                    at tristique duis. <br> Sit morbi risus pellentesque arcu. Bibendum malesuada <br>
+                                    aenean
+                                    risus gravida scelerisque ornare. Purus.
+                                </p>
+                                <button class="cta-btn">Contact Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide slide-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h1 style="max-width: 681px;">Transforming your <br> home search into <br> Reality.</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Vitae tempus <br> diam risus est morbi
+                                    senectus
+                                    at tristique duis. <br> Sit morbi risus pellentesque arcu. Bibendum malesuada <br>
+                                    aenean
+                                    risus gravida scelerisque ornare. Purus.
+                                </p>
+                                <button class="cta-btn">Contact Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        class AutoplayCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.slides = document.querySelectorAll('.carousel-slide');
+                this.totalSlides = this.slides.length;
+                this.autoplayInterval = null;
+
+                this.initHamburger();
+                this.startAutoplay();
+            }
+
+            initHamburger() {
+                const hamburger = document.querySelector('.hamburger');
+                const mobileNav = document.querySelector('.mobile-nav');
+                const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    mobileNav.classList.toggle('active');
+                });
+
+                // Close mobile nav when clicking on a link
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                    });
+                });
+
+                // Close mobile nav when clicking outside
+                mobileNav.addEventListener('click', (e) => {
+                    if (e.target === mobileNav) {
+                        hamburger.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                    }
+                });
+            }
+
+            goToSlide(slideIndex) {
+                // Remove active class from current slide
+                this.slides[this.currentSlide].classList.remove('active');
+
+                // Update current slide
+                this.currentSlide = slideIndex;
+
+                // Add active class to new slide
+                this.slides[this.currentSlide].classList.add('active');
+            }
+
+            nextSlide() {
+                const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+                this.goToSlide(nextIndex);
+            }
+
+            startAutoplay() {
+                this.autoplayInterval = setInterval(() => {
+                    this.nextSlide();
+                }, 5000); // Change slide every 5 seconds
+            }
+        }
+
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new AutoplayCarousel();
+        });
+    </script>
+
+    <section class="section-1">
+        <div class="container">
+            <div class="banner1-text">
+                <h2 data-aos="fade-up" data-aos-duration="600">Most Viewed</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Discover a range of vacation homes worldwide. book securely
+                    and get
+                    expert customer support for a stress free stay </p>
+            </div>
+            <div class="row">
+                <div class="banner-1">
+
+                    <div class="col-4">
+                        <div class="banner1-card" data-aos="fade-right" data-aos-delay="0" data-aos-duration="800">
+                            <div class="banner1-card-img">
+                                <img src="./asstes/image (33).png" alt="">
+                            </div>
+                            <div class="location1">
+                                <p>47 W 13th St, New York, NY 10011, USA</p>
+                                <img src="./asstes/Group 7.png" class="shower" alt="">
+                            </div>
+                            <h4 class="villa">Ocean Breeze Villa</h4>
+                            <p class="rate">$910.000,00</p>
+                            <div class="banner1-btn">
+                                <a href="#" class="view-btn1">Book Now</a>
+                                <a href="#" class="view-btn2">See Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="banner1-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
+                            <div class="banner1-card-img">
+                                <img src="./asstes/image (31).png" alt="">
+                            </div>
+                            <div class="location1">
+                                <p>20 Cooper Square, New York, NY 10003, USA</p>
+                                <img src="./asstes/Group 7.png" class="shower" alt="">
+                            </div>
+                            <h4 class="villa">Jackson House</h4>
+                            <p class="rate">$750.000,00</p>
+                            <div class="banner1-btn">
+                                <a href="#" class="view-btn1">Book Now</a>
+                                <a href="#" class="view-btn2">See Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="banner1-card" data-aos="fade-left" data-aos-delay="300" data-aos-duration="800">
+                            <div class="banner1-card-img">
+                                <img src="./asstes/image (32).png" alt="">
+                            </div>
+                            <div class="location1">
+                                <p>Metrotech Center, Brooklyn, NY 11201, USA</p>
+                                <img src="./asstes/Group 7.png" class="shower" alt="">
+                            </div>
+                            <h4 class="villa">Lakeside Cottage</h4>
+                            <p class="rate">$540.000,00</p>
+                            <div class="banner1-btn">
+                                <a href="#" class="view-btn1">Book Now</a>
+                                <a href="#" class="view-btn2">See Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- section2 -->
+    <section class="section-2">
+        <div class="container">
+            <div class="row">
+                <div class="commom-section-2">
+                    <div class="col-6" data-aos="fade-right" data-aos-duration="800">
+                        <div class="right">
+                            <img src="./asstes/image (11).png" alt="">
+
+                        </div>
+                    </div>
+                    <div class="col-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+                        <div class="left">
+                            <div class="text-section2">
+                                <h2>The Easiest Method To Find
+                                    a House</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur. Dui dolor pretium consectetur odio neque
+                                    tincidunt eu
+                                    sollicitudin pretium. Placerat molestie lacus fringilla interdum. Varius massa massa
+                                    ipsum urna
+                                    amet semper etiam urna. Ac eget eget semper laoreet tortor mi ullamcorper. Proin
+                                    lobortis nunc
+                                    nec nisl leo in enim. Nunc nec lorem iaculis sodales porta vivamus pulvinar lectus.
+                                </p>
+                                <p>Lorem ipsum dolor sit amet consectetur. Id donec vestibulum augue nunc nibh purus
+                                    tempus.
+                                    Leo sed
+                                    dui id etiam. Dui enim volutpat urna egestas sed tellus pulvinar. Consectetur auctor
+                                    tristique
+                                    aenean quis quam.
+                                </p>
+                                <a href="#" class="btn">Try Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- section3 -->
+
+    <section class="section-3">
+        <div class="container">
+            <div class="banner3-text">
+                <h2 data-aos="fade-up" data-aos-duration="600">Our Work In 3 Steps</h2>
+                <p data-aos="fade-up" data-aos-duration="200">Discover a range of vacation homes worldwide. book
+                    securely and get <br> expert customer support for a
+                    stress free stay</p>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="banner-3">
+                        <div class="col-10" data-aos="fade-right" data-aos-duration="800">
+                            <div class="banner3-image">
+                                <img src="./asstes/Vector (6).png" alt="">
+                            </div>
+                            <h4>Research Phase</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur. Urna purus ut elit vitae enim donec. Viverra
+                                consequat.</p>
+                        </div>
+                        <div class="arow">
+                            <img src="./asstes/Arrow 2.png" alt="">
+                        </div>
+                        <div class="col-10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                            <div class="banner3-image">
+                                <img src="./asstes/Vector (4).png" alt="">
+                            </div>
+                            <h4>Research Phase</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur. Urna purus ut elit vitae enim donec. Viverra
+                                consequat.</p>
+
+                        </div>
+                        <div class="arow">
+                            <img src="./asstes/Arrow 2.png" alt="">
+                        </div>
+                        <div class="col-10" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                            <div class="banner3-image">
+                                <img src="./asstes/🦆 icon _keys thin_.png" alt="">
+                            </div>
+                            <h4>Research Phase</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur. Urna purus ut elit vitae enim donec. Viverra
+                                consequat.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- section-4 -->
+
+    <section class="section-4">
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+
+        <div class="container">
+            <div class="line4">
+
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card" data-target="50000">
+                    <div class="stat-number" id="counter1">0</div>
+                    <div class="stat-label">Satisfied Clients</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress1"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-target="35000">
+                    <div class="stat-number" id="counter2">0</div>
+                    <div class="stat-label">Estate Sales</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress2"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-target="96">
+                    <div class="stat-number" id="counter3">0<span style="font-size: 2rem;">%</span></div>
+                    <div class="stat-label">Client Satisfaction</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress3"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-target="12">
+                    <div class="stat-number" id="counter4">0<span style="font-size: 2rem;">+</span></div>
+                    <div class="stat-label">Seasoned Years</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="line4">
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animation timing
+        const animationDuration = 2000; // 2 seconds
+        const delayBetweenCards = 200; // 200ms delay between each card
+
+        // Counter animation function
+        function animateCounter(element, target, duration, suffix = '') {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    start = target;
+                    clearInterval(timer);
+                }
+
+                if (suffix === 'K') {
+                    element.innerHTML = Math.floor(start / 1000) + '<span style="font-size: 2rem;">K</span>';
+                } else if (suffix === '%') {
+                    element.innerHTML = Math.floor(start) + '<span style="font-size: 2rem;">%</span>';
+                } else if (suffix === '+') {
+                    element.innerHTML = Math.floor(start) + '<span style="font-size: 2rem;">+</span>';
+                } else {
+                    element.textContent = Math.floor(start).toLocaleString();
+                }
+            }, 16);
+        }
+
+        // Initialize animations when page loads
+        window.addEventListener('load', () => {
+            const cards = document.querySelectorAll('.stat-card');
+
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    // Animate card appearance
+                    card.style.animation = 'slideInUp 0.6s ease forwards';
+
+                    // Start counter animation
+                    const counter = card.querySelector('.stat-number');
+                    const progressBar = card.querySelector('.progress-fill');
+                    const target = parseInt(card.dataset.target);
+
+                    // Determine suffix based on content
+                    let suffix = '';
+                    if (target >= 1000) suffix = 'K';
+                    else if (index === 2) suffix = '%';
+                    else if (index === 3) suffix = '+';
+
+                    // Animate counter
+                    setTimeout(() => {
+                        animateCounter(counter, target, animationDuration, suffix);
+
+                        // Animate progress bar
+                        const progressPercent = index === 2 ? target : Math.min((target / 50000) * 100, 100);
+                        progressBar.style.width = progressPercent + '%';
+                    }, 300);
+
+                }, index * delayBetweenCards);
+            });
+        });
+
+        // Add hover effects
+        document.querySelectorAll('.stat-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const number = card.querySelector('.stat-number');
+                number.style.transform = 'scale(1.1)';
+                number.style.transition = 'transform 0.3s ease';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                const number = card.querySelector('.stat-number');
+                number.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+    <!-- section5 -->
+
+    <section class="section-5">
+        <div class="container">
+            <div class="banner5-text">
+                <h2 data-aos="fade-up" data-aos-duration="600">Explore Our Elite Agent</h2>
+                <p data-aos="fade-up" data-aos-duration="200">Meet the epitome of excellence in real estate – our Elite
+                    <br>
+                    Agent, a standout professional in the industry.</p>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="banner-5">
+                        <div class="col-4">
+                            <div class="banner5-card" data-aos="fade-right" data-aos-delay="0" data-aos-duration="800">
+                                <div class="banner5-image">
+                                    <img src="./asstes/image (12).png" alt="">
+
+                                </div>
+                                <div class="banner5-text1">
+                                    <h4>Grace Elizabeth </h4>
+                                    <p> Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="banner5-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
+                                <div class="banner5-image">
+                                    <img src="./asstes/image (27).png" alt="">
+
+                                </div>
+
+                                <div class="banner5-text1">
+                                    <h4>Grace Elizabeth </h4>
+                                    <p> Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="banner5-card" data-aos="fade-left" data-aos-delay="300" data-aos-duration="800">
+                                <div class="banner5-image">
+                                    <img src="./asstes/image (13).png" alt="">
+
+                                </div>
+                                <div class="banner5-text1">
+                                    <h4>Grace Elizabeth </h4>
+                                    <p> Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner5-btn">
+                        <a href="#" class="banner5-btn1">View Our All Agents</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section6 -->
+
+    <section class="section-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="banner-6">
+                        <div class="col-6">
+                            <div class="banner6-card" data-aos="fade-right" data-aos-duration="600" data-aos-delay="0">
+                                <h4>Get the house in trust <br> by working with our agents</h4>
+                                <div class="icon-6">
+                                    <div class="both-6">
+                                        <img src="./asstes/🦆 icon _User_.png" alt="">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Leo platea tellus amet consectetur
+                                            lorem
+                                            sagittis a amet sit. Mauris in senectus felis mi tempus gravida erat massa.
+                                        </p>
+                                    </div>
+
+                                    <div class="both-6">
+                                        <img src="./asstes/hugeicons_discount-tag-02.png" alt="">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Leo platea tellus amet consectetur
+                                            lorem
+                                            sagittis a amet sit. Mauris in senectus felis mi tempus gravida erat massa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="banner6-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+                                <div class="banner6-image">
+                                    <img src="./asstes/image (14).png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section7 -->
+
+    <section class="section-7">
+        <div class="container">
+            <div class="banner7-text">
+                <h2 data-aos="fade-up" data-aos-duration="600">Testimonials from clients</h2>
+                <p data-aos="fade-up" data-aos-duration="200">Group One is excited to present this exeptional property
+                    <br>
+                    in the prestegious location.</p>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="banner-7  swiper mySwiper-7">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide col-4">
+                                <div class="banner7-card">
+                                    <div class="banner7-image">
+                                        <img src="./asstes/image (28).png" class="image-1" alt="">
+                                        <img src="./asstes/Group 33.png" class="image-2" alt="">
+                                    </div>
+                                    <div class="banner7-card-text">
+                                        <h4>Mr. Soumyadip Ghosh</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur. Fringilla quisque arcu sagittis
+                                            lectus
+                                            nibh
+                                            tellus sem. Viverra posuere ultrices maecenas enim. Laoreet massa at vitae
+                                            et
+                                            donec
+                                            lacus nunc quis suscipit.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class=" swiper-slide col-4">
+                                <div class="banner7-card">
+                                    <div class="banner7-image">
+                                        <img src="./asstes/image (15).png" class="image-1" alt="">
+                                        <img src="./asstes/Group 33.png" class="image-2" alt="">
+                                    </div>
+                                    <div class="banner7-card-text">
+                                        <h4>Mr. Soumik Sen</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur. Fringilla quisque arcu sagittis
+                                            lectus
+                                            nibh
+                                            tellus sem. Viverra posuere ultrices maecenas enim. Laoreet massa at vitae
+                                            et
+                                            donec
+                                            lacus nunc quis suscipit.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class=" swiper-slide col-4">
+                                <div class="banner7-card">
+                                    <div class="banner7-image">
+                                        <img src="./asstes/image (16).png" class="image-1" alt="">
+                                        <img src="./asstes/Group 33.png" class="image-2" alt="">
+                                    </div>
+                                    <div class="banner7-card-text">
+                                        <h4>Mrs. Manpreet Kaur</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur. Fringilla quisque arcu sagittis
+                                            lectus
+                                            nibh
+                                            tellus sem. Viverra posuere ultrices maecenas enim. Laoreet massa at vitae
+                                            et
+                                            donec
+                                            lacus nunc quis suscipit.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        // Section 7 Swiper
+        new Swiper(".mySwiper-7", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            },
+        });
+
+        // Section 8 Swiper
+        new Swiper(".mySwiper-8", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            },
+        });
+    </script>
+
+
+
+
+    <!-- section8 -->
+
+    <section class="section-8">
+        <div class="container">
+            <div class="banner8-text">
+                <h2 data-aos="fade-up" data-aos-duration="600">Our Recent Blogs</h2>
+                <p data-aos="fade-up" data-aos-duration="200">Stay informed with our latest real estate insights</p>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class=" swiper mySwiper-8 banner-8">
+                        <div class="swiper-wrapper">
+                            <div class=" swiper-slide col-4">
+                                <div class="banner8-card">
+                                    <div class="banner8-image">
+                                        <img src="./asstes/image (17).png" alt="">
+                                    </div>
+                                    <h4>Essential Steps for First-Time Homebuyers
+                                        to Follow</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur. Eget euismod in cursus lobortis vel.
+                                        Non
+                                        at
+                                        porttitor
+                                        tempus ornare eu in nisi egestas sit. Sit id nisl sed magnis in egestas
+                                        facilisis
+                                        aliquam.
+                                    </p>
+                                    <a href="#" class="read">
+                                        <span>read more</span>
+                                        <img src="./asstes/mingcute_arrow-right-line.png" alt="">
+
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" swiper-slide col-4">
+                                <div class="banner8-card">
+                                    <div class="banner8-image">
+                                        <img src="./asstes/image (18).png" alt="">
+                                    </div>
+                                    <h4>Essential Steps for First-Time Homebuyers
+                                        to Follow</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur. Eget euismod in cursus lobortis vel.
+                                        Non
+                                        at porttitor
+                                        tempus ornare eu in nisi egestas sit. Sit id nisl sed magnis in egestas
+                                        facilisis aliquam.
+                                    </p>
+                                    <a href="#" class="read">
+                                        <span>read more</span>
+                                        <img src="./asstes/mingcute_arrow-right-line.png" alt="">
+
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=" swiper-slide col-4">
+                                <div class="banner8-card">
+                                    <div class="banner8-image">
+                                        <img src="./asstes/image (19).png" alt="">
+                                    </div>
+                                    <h4>Essential Steps for First-Time Homebuyers
+                                        to Follow</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur. Eget euismod in cursus lobortis vel.
+                                        Non
+                                        at porttitor
+                                        tempus ornare eu in nisi egestas sit. Sit id nisl sed magnis in egestas
+                                        facilisis aliquam.
+                                    </p>
+                                    <a href="#" class="read">
+                                        <span>read more</span>
+                                        <img src="./asstes/mingcute_arrow-right-line.png" alt="">
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        // Section 7 Swiper
+        new Swiper(".mySwiper-7", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            },
+        });
+
+        // Section 8 Swiper
+        new Swiper(".mySwiper-8", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            },
+        });
+    </script>
+    <!-- footer  -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-top" data-aos="fade-up" data-aos-duration="1000">
+                <div class="footer-top-left">
+                    <h2>We'll begin as a team.</h2>
+                    <p>Crafting quality structures that
+                        stand the test of time.</p>
+                </div>
+                <div class="footer-top-right">
+                    <h2>Newsletter</h2>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your E-mail" />
+                        <button class="bttn">
+                            <span class="button-content">Subscribe</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25" data-aos="fade-right" data-aos-delay="100">
+                    <div class="child-foot foot-1">
+                        <a href=""><img src="./asstes/lOGO (4).png" alt=""></a>
+                        <div class="phone">
+                            <img src="./asstes/Group 42.png" alt="">
+                            <p>9-423-576-7090</p>
+                        </div>
+                        <div class="email">
+                            <img src="./asstes/Group 41.png" alt="">
+                            <p>info@plotland.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-25" data-aos="fade-up" data-aos-delay="200">
+                    <div class="child-foot">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about-us.html">About</a></li>
+                            <li><a href="">Properties</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Team</a></li>
+                            <li><a href="">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-25" data-aos="fade-up" data-aos-delay="300">
+                    <div class="child-foot">
+                        <h3>Our Address</h3>
+                        <div class="location">
+                            <img src="./asstes/Vector (5).png" alt="">
+                            <p>36 East 8th Street, New York,
+                                NY 10003, United States</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-25" data-aos="fade-left" data-aos-delay="400">
+                    <div class="child-foot">
+                        <h3>Our Properties</h3>
+                        <div class="foot-images">
+                            <div class="img">
+                                <a href=""><img src="./asstes/image (20).png" alt=""></a>
+                            </div>
+                            <div class="img">
+                                <a href=""><img src="./asstes/image (21).png" alt=""></a>
+                            </div>
+                            <div class="img">
+                                <a href=""><img src="./asstes/image (22).png" alt=""></a>
+                            </div>
+                            <div class="img">
+                                <a href=""><img src="./asstes/image (23).png" alt=""></a>
+                            </div>
+                            <div class="img">
+                                <a href=""><img src="./asstes/image (24).png" alt=""></a>
+                            </div>
+                            <div class="img">
+                                <a href=""><img src="./asstes/image (24).png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-foot" data-aos="fade-in" data-aos-duration="800">
+                <div class="bottom-left-foot">
+                    <p>Copyright © PlotLand | Designed By Indrajit Roy</p>
+                </div>
+                <div class="bottom-right-foot">
+                    <span class="foot-txt">Follow us on</span>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+</body>
+
+</html>
