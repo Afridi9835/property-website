@@ -30,6 +30,11 @@ body {
   margin: 0 -15px;
 }
 
+.swiper-slide {
+  width: auto;
+}
+
+
 
 
 a {
