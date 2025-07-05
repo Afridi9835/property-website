@@ -16,7 +16,7 @@
             <nav>
                 <div class="nav-wrpr">
                     <div class="nav-logo">
-                        <a href="#"><img src="./assets/images/logo-img.svg" alt="" class="logo"></a>
+                        <a href="#"><img src="./asstes/lOGO (4).png" alt="" class="logo"></a>
                     </div>
                     <div class="nav-toggler">
                         <div class="container1">
@@ -55,17 +55,18 @@
     
     <section class="section-8">
         <div class="container">
-            <div class="banner8-text">
+             <div class="banner8-text">
                 <h2 data-aos="fade-up" data-aos-duration="600">Our Recent Blogs</h2>
                 <p data-aos="fade-up" data-aos-duration="200">Stay informed with our latest real estate insights</p>
 
-            </div>
+            </div> 
             <div class="row">
                 <div class="col-12">
                     <div class=" swiper mySwiper-8 banner-8">
                         <div class="swiper-wrapper">
                             <div class=" swiper-slide col-4">
                                 <div class="banner8-card">
+
                                     <div class="banner8-image">
                                         <img src="./asstes/image (17).png" alt="">
                                     </div>
@@ -165,12 +166,12 @@
     
     <section class="section-8">
         <div class="container">
-            <div class="banner8-text">
+             <!-- <div class="banner8-text">
                 <h2 data-aos="fade-up" data-aos-duration="600">Our Recent Blogs</h2>
                 <p data-aos="fade-up" data-aos-duration="200">Stay informed with our latest real estate insights</p>
 
-            </div>
-            <div class="row">
+            </div> -->
+            <div class="row center">
                 <div class="col-12">
                     <div class=" swiper mySwiper-8 banner-8">
                         <div class="swiper-wrapper">
@@ -214,10 +215,13 @@
                                         <img src="./asstes/mingcute_arrow-right-line.png" alt="">
 
                                     </a>
+                                
                                 </div>
                             </div>
                             <div class=" swiper-slide col-4">
                                 <div class="banner8-card">
+                                
+
                                     <div class="banner8-image">
                                         <img src="./asstes/image (19).png" alt="">
                                     </div>
@@ -234,33 +238,29 @@
                                         <img src="./asstes/mingcute_arrow-right-line.png" alt="">
 
                                     </a>
+                                
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
 
                 </div>
+       <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
             </div>
-
 
         </div>
     </section>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ <script>
 
-    <script>
-        // Section 7 Swiper
-        new Swiper(".mySwiper-7", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: { delay: 4000, disableOnInteraction: false },
-            breakpoints: {
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-            },
-        });
 
-        // Section 8 Swiper
+ // Section 8 Swiper
         new Swiper(".mySwiper-8", {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -271,7 +271,52 @@
                 1024: { slidesPerView: 3 },
             },
         });
+       const counters = document.querySelectorAll(".counter");
+let hasAnimated = false;
+
+const startCounting = () => {
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText.replace(/[^\d]/g, ''); // Remove "K", "%" etc.
+      const increment = target / 1000;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment) + getSuffix(counter.innerText);
+        setTimeout(updateCount, 40);
+      } else {
+        counter.innerText = target + getSuffix(counter.innerText);
+      }
+    };
+    updateCount();
+  });
+};
+
+const getSuffix = (text) => {
+  if (text.includes("K")) return "K";
+  if (text.includes("%")) return "%";
+  if (text.includes("+")) return "+";
+  return "";
+};
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !hasAnimated) {
+        startCounting();
+        hasAnimated = true;
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
+
+const section = document.querySelector(".numbers");
+if (section) observer.observe(section);
     </script>
+
 
 
 <footer>

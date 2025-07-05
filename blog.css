@@ -18,7 +18,10 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-
+.center{
+    display: flex;
+    justify-content: center;
+}
 body {
     font-family: "Syne", sans-serif;
     background: #F0F8FF;
@@ -206,7 +209,7 @@ header {
     border-radius: 8px;
     color: #FFFFFF;
     font-weight: 500;
-    font-size: 16px;
+  font-size: 16px;
 }
 
 
@@ -215,12 +218,43 @@ header {
     background: url("./asstes/hero-bg-3.svg") no-repeat center/cover;
 }
 
+
+
 .banner-content h1 {
     font-size: 68px;
     line-height: 81px;
     font-weight: 700;
     color: #FFFFFF;
 }
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 75px;
+    
+}
+
+.pagination .active {
+    padding: 8.5px 14px;
+    background-color: #7080D0;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.pagination a {
+    font-family: "Poppins", sans-serif;
+    font-size: 15.26px;
+    font-weight: 600;
+    color: #333333;
+    padding: 8.5px 14px;
+    background-color: #F1F1F1;
+    border-radius: 8px;
+}
+
+
+
 
 
 @media screen and (max-width : 991px) {
@@ -373,6 +407,12 @@ header {
     .banner-content h1{
         font-size: 20px;
     }
+
+    .pagination{
+        margin-top: 10px;
+    }
+    
+
 }
 
 
@@ -392,6 +432,7 @@ header {
   display: flex;
   gap: 24px;
   margin-top: 50px;
+  /* flex-wrap: wrap; */
   /* justify-content: space-around; */
   /* flex-wrap: wrap; */
 }
@@ -414,7 +455,7 @@ header {
   max-width: 456px;
   min-height: 435px;
   border-radius: 25px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   /* box-shadow: 0 10px 20px 0 #1A1A1A;  */
   /* border: 2px solid black; */
   padding: 16px 16px;
   background-color: white;
@@ -1024,7 +1065,7 @@ footer .row {
      /* section8 */
 
   .section-8{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 
@@ -1032,6 +1073,7 @@ footer .row {
     flex-wrap: wrap;
     gap: 10px;
     padding: 0px 0px;
+    margin-top: 10px;
   }
   .banner8-text > h2 {
     font-size: 20px;
@@ -1063,8 +1105,10 @@ footer .row {
     max-width: 15px;
     min-height: 15px;
   }
+
+  
   .section-8{
-    padding: 20px 20px;
+    /* padding: 20px 20px; */
   }
   .banner8-text > p{
     margin-top: 10px;
@@ -1124,4 +1168,8 @@ footer .row {
         gap: 18px;
     } 
 
+ 
+ footer{
+    margin-top: 20px;
+ }
 }
