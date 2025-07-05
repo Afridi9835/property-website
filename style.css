@@ -1763,13 +1763,27 @@ footer .row {
   .banner8-card > p {
     margin-top: 10px;
   }
+  
+  .hamburger span{
+    display: block;
+  }
+   .hamburger {
+    display: flex;
+    flex-direction: column;
+  }
+    .nav-menu {
+    display: none;
+  } 
+   .btn1 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
   /* nav and banner */
-  .nav-menu {
+   /* .nav-menu {
     display: none;
-  }
+  }  */
 
   .hero-text > h1 {
     font-size: 2.5rem;
@@ -2043,21 +2057,22 @@ footer .row {
   footer .row {
     row-gap: 20px;
   }
-  .hamburger {
+  /* .hamburger {
     display: flex;
     flex-direction: column;
-  }
+  } */
 
   
   .btn1 {
     display: none;
   }
+}
 
-  .hamburger span{
+  /* .hamburger span{
     display: block;
   }
 
-}
+} */
 
 /* @media screen and ( max-width:700px ){
 
@@ -2509,7 +2524,7 @@ footer .row {
 .carousel-slide.active.slide-2 {
   animation: kenBurns2 5s ease-out forwards;
 }
-
+/* 
 .carousel-slide.active.slide-3 {
   animation: kenBurns3 0s ease-out forwards;
-}
+} */
