@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    
+
 
     <header class="header">
         <div class="container">
@@ -24,7 +24,7 @@
                     <img src="./asstes/lOGO (4).png" alt="">
 
                 </div>
-                 <div class="hamburger">
+                <div class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -37,7 +37,7 @@
                     <li><a href="#">Contact Us</a></li>
                 </ul>
                 <button class="contact-btn btn1">Contact now</button>
-               
+
             </nav>
         </div>
     </header>
@@ -146,16 +146,17 @@
                 const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
 
                 hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    mobileNav.classList.toggle('active');
-                    
+                     hamburger.classList.toggle('active');
+                     mobileNav.classList.toggle('active');
+                    //   mobileNav.classList.remove('active');
+
                 });
 
                 // Close mobile nav when clicking on a link
                 mobileNavLinks.forEach(link => {
                     link.addEventListener('click', () => {
-                        hamburger.classList.remove('active');
-                        mobileNav.classList.remove('active');
+                         hamburger.classList.remove('active');
+                         mobileNav.classList.remove('active');
                     });
                 });
 
@@ -495,7 +496,8 @@
                 <h2 data-aos="fade-up" data-aos-duration="600">Explore Our Elite Agent</h2>
                 <p data-aos="fade-up" data-aos-duration="200">Meet the epitome of excellence in real estate – our Elite
                     <br>
-                    Agent, a standout professional in the industry.</p>
+                    Agent, a standout professional in the industry.
+                </p>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -597,7 +599,8 @@
                 <h2 data-aos="fade-up" data-aos-duration="600">Testimonials from clients</h2>
                 <p data-aos="fade-up" data-aos-duration="200">Group One is excited to present this exeptional property
                     <br>
-                    in the prestegious location.</p>
+                    in the prestegious location.
+                </p>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -606,8 +609,17 @@
                             <div class="swiper-slide col-4">
                                 <div class="banner7-card">
                                     <div class="banner7-image">
-                                        <img src="./asstes/image (28).png" class="image-1" alt="">
-                                        <img src="./asstes/Group 33.png" class="image-2" alt="">
+                                        <div class="image-1">
+                                            <img src="./asstes/image (15).png" alt="">
+                                        </div>
+                                        <div class="image-2">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+
+                                        </div>
                                     </div>
                                     <div class="banner7-card-text">
                                         <h4>Mr. Soumyadip Ghosh</h4>
@@ -624,9 +636,19 @@
                             </div>
                             <div class=" swiper-slide col-4">
                                 <div class="banner7-card">
+
                                     <div class="banner7-image">
-                                        <img src="./asstes/image (15).png" class="image-1" alt="">
-                                        <img src="./asstes/Group 33.png" class="image-2" alt="">
+                                        <div class="image-1">
+                                            <img src="./asstes/image (15).png" alt="">
+                                        </div>
+                                        <div class="image-2">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+
+                                        </div>
                                     </div>
                                     <div class="banner7-card-text">
                                         <h4>Mr. Soumik Sen</h4>
@@ -644,8 +666,17 @@
                             <div class=" swiper-slide col-4">
                                 <div class="banner7-card">
                                     <div class="banner7-image">
-                                        <img src="./asstes/image (16).png" class="image-1" alt="">
-                                        <img src="./asstes/Group 33.png" class="image-2" alt="">
+                                        <div class="image-1">
+                                            <img src="./asstes/image (15).png" alt="">
+                                        </div>
+                                        <div class="image-2">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+                                            <img src="./asstes/Star 5.png" alt="">
+
+                                        </div>
                                     </div>
                                     <div class="banner7-card-text">
                                         <h4>Mrs. Manpreet Kaur</h4>
@@ -661,9 +692,12 @@
 
                             </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
     <!-- Swiper JS -->
@@ -676,6 +710,11 @@
             spaceBetween: 30,
             loop: true,
             autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true, // Makes pagination more compact for many slides
+            },
             breakpoints: {
                 768: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
@@ -774,6 +813,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
 
                 </div>
@@ -803,8 +843,13 @@
             spaceBetween: 30,
             loop: true,
             autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true, // Makes pagination more compact for many slides
+            },
             breakpoints: {
-                768: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
             },
         });

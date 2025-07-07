@@ -119,7 +119,7 @@ span {
   transform: scaleX(1);
 }
 
- .contact-btn {
+.contact-btn {
   background: #122732;
   color: white;
   padding: 18px 35px;
@@ -129,24 +129,25 @@ span {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: relative;
+  /* position: relative; */
   /* position: absolute; */
   text-wrap: nowrap;
+  font-family: sans-serif;
 }
- .contact-btn:hover {
+.contact-btn:hover {
   background: #1b92d2;
   transform: translateY(-2px);
-} 
+}
 
- /* From Uiverse.io by vikiWayne 
+/* From Uiverse.io by vikiWayne 
  .contact-btn{
   paddin: 18px 35px;
   border: none;
   border-radius: 8px;
   font-weight: bold; 
    letter-spacing: 5px; */
-   /* text-transform: uppercase; */
-   /* cursor: pointer;
+/* text-transform: uppercase; */
+/* cursor: pointer;
    color: #2c9caf;
   transition: all 1000ms;
   font-size: 16px;
@@ -155,7 +156,8 @@ span {
   overflow: hidden;
   background-color: #122732;
    outline: 2px solid #2c9caf;
-}   */ */
+}   */
+*/
 /*  
 .contact-btn:hover{
   color: #ffffff;
@@ -186,13 +188,23 @@ span {
 
 
 /* Hamburger Menu */
-.hamburger {
+  /* .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   padding: 5px;
-  z-index: 1001;
-}
+  z-index: 1000;
+  /* position: relative; */
+ */
+
+.hamburger {
+    /* display: flex; */
+    display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1000;
+  }
 
 .hamburger span {
   width: 25px;
@@ -201,7 +213,7 @@ span {
   margin: 3px 0;
   transition: all 0.3s ease;
   border-radius: 2px;
-  display: none;
+  position: relative;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -229,13 +241,14 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 999;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
 }
 
 .mobile-nav.active {
+  display: flex;
   opacity: 1;
   visibility: visible;
 }
@@ -982,6 +995,7 @@ span {
 
 .section-7 {
   margin-top: 75px;
+  padding: 0 20px;
 }
 .col-12 {
   width: 100%;
@@ -1031,9 +1045,20 @@ span {
   object-fit: contain;
 }
 .image-2 {
-  max-width: 118px;
+  /* max-width: 21px;
   min-height: 21px;
+  width: 100%; */
+  max-width: 120px;
+  min-height: 22px;
   width: 100%;
+  display: flex;
+}
+
+.image-2 > img {
+  max-width: 21px;
+  min-height: 20px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -1054,6 +1079,7 @@ span {
 /* section8 */
 .section-8 {
   margin-top: 75px;
+  padding: 0 20px;
 }
 
 .col-12 {
@@ -1554,6 +1580,10 @@ footer .row {
   .banner6-card > h4 {
     font-size: 35px;
   }
+  .banner-6 {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
   /* section7 */
   .section-7 {
     margin-top: 50px;
@@ -1658,7 +1688,7 @@ footer .row {
   }
 
   .foot-1 p {
-    font-size: 16px;
+    font-size: 11px;
   }
 
   .email {
@@ -1675,7 +1705,7 @@ footer .row {
   }
 
   .location p {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 23px;
   }
 
@@ -1696,7 +1726,7 @@ footer .row {
   }
 
   .child-foot ul li a {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .bottom-foot {
@@ -1763,28 +1793,45 @@ footer .row {
   .banner8-card > p {
     margin-top: 10px;
   }
-  
-  .hamburger span{
+
+  .hamburger span {
     display: block;
   }
-   .hamburger {
+  /* .hamburger {
     display: flex;
     flex-direction: column;
+    /* display: block; */
+
+  .nav-menu {
+    /* display: none; */
   }
-    .nav-menu {
+  .btn1 {
     display: none;
-  } 
-   .btn1 {
+  }
+  .nav-menu {
     display: none;
+  }
+
+  /* .hamburger {
+    display: flex;
+  } */
+  .mobile-nav {
+    display: flex;
   }
 }
 
 @media screen and (max-width: 768px) {
   /* nav and banner */
-   /* .nav-menu {
+  /* .nav-menu {
     display: none;
-  }  */
+  }
 
+  .hamburger {
+    display: flex;
+  } */
+  .mobile-nav {
+    display: flex;
+  }
   .hero-text > h1 {
     font-size: 2.5rem;
   }
@@ -1809,10 +1856,10 @@ footer .row {
     margin-top: 30px;
   }
   .banner1-card-img {
-    min-height: 130px;
+    min-height: 102px;
   }
   .banner1-card {
-    min-height: 410px;
+    min-height: 340px;
   }
 
   .location1 {
@@ -1858,6 +1905,18 @@ footer .row {
   }
   .banner-3 {
     padding: 0 15px;
+  }
+
+  .col-10 > p {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .banner3-image {
+    margin-top: 5px;
+  }
+  .col-10 > h4 {
+    margin-top: 10px;
   }
 
   /* section-4 */
@@ -2062,13 +2121,12 @@ footer .row {
     flex-direction: column;
   } */
 
-  
   .btn1 {
     display: none;
   }
 }
 
-  /* .hamburger span{
+/* .hamburger span{
     display: block;
   }
 
@@ -2120,7 +2178,7 @@ footer .row {
     flex-direction: column;
   } */
 
-  .hamburger span{
+  .hamburger span {
     display: block;
   }
 
@@ -2408,7 +2466,7 @@ footer .row {
   }
   .banner8-card {
     min-height: 145px;
-    padding: 20px 20px;
+    /* padding: 20px 20px; */
   }
   .banner8-card > p {
     margin-top: 5px;
@@ -2436,8 +2494,12 @@ footer .row {
 
   /* footer */
   footer .row {
-    padding: 30px 0;
-    row-gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 30px 0; */
+    /* row-gap: 15px; */
     text-align: center;
   }
 
@@ -2481,10 +2543,10 @@ footer .row {
   }
 
   .foot-1 {
-    flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     gap: 18px;
   }
 }
@@ -2528,3 +2590,17 @@ footer .row {
 .carousel-slide.active.slide-3 {
   animation: kenBurns3 0s ease-out forwards;
 } */
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  background: #ddd;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #your-brand-color; /* Replace with your brand color */
+}

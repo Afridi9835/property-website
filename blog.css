@@ -1087,7 +1087,7 @@ footer .row {
   }
   .banner8-card {
     min-height: 145px;
-    padding: 20px 20px ;
+    /* padding: 20px 20px ; */
   }
   .banner8-card > p {
     margin-top: 5px;
