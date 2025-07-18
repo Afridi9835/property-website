@@ -20,7 +20,7 @@ body {
 }
 
 body {
-    font-family: "Syne", sans-serif;
+    font-family: "Syne";
     background: #F0F8FF;
 }
 
@@ -947,7 +947,7 @@ footer .row {
   margin: auto;
 }
   .banner-6 {
-    /* flex-wrap: wrap; */
+     flex-wrap: wrap; 
     /* flex-direction: column; */
     gap: 20px;
   }
@@ -983,117 +983,115 @@ footer .row {
   .banner7-text>p{
     font-size: 15px;
   }
-  
-     footer {
-        padding: 50px 0;
-    }
+   footer {
+    padding: 50px 0;
+  }
 
-    .footer-top {
-        margin-bottom: 40px;
-    }
+  .footer-top {
+    margin-bottom: 40px;
+  }
 
-    .footer-top h2 {
-        font-weight: 600;
-        font-size: 30px;
-        color: #FFFFFF;
-    }
+  .footer-top h2 {
+    font-weight: 600;
+    font-size: 30px;
+    color: #ffffff;
+  }
 
-    .footer-top p {
-        font-size: 16px;
-        margin-top: 18px;
-    }
+  .footer-top p {
+    font-size: 16px;
+    margin-top: 18px;
+  }
 
-    .newsletter-form {
-        gap: 6px;
-        margin-top: 18px;
-    }
+  .newsletter-form {
+    gap: 6px;
+    margin-top: 18px;
+  }
 
-    .newsletter-form input {
-        padding: 16px 29px;
-    }
+  .newsletter-form input {
+    padding: 16px 29px;
+  }
 
-    .newsletter-form input::placeholder {
-        font-size: 14px;
-    }
+  .newsletter-form input::placeholder {
+    font-size: 14px;
+  }
 
-    .newsletter-form button {
-        padding: 14px 29px;
-        font-size: 17px;
-    }
+  .newsletter-form button {
+    padding: 14px 29px;
+    font-size: 17px;
+  }
 
-    footer .row {
-        padding: 45px 0;
-    }
+  footer .row {
+    padding: 45px 0;
+  }
 
-    .phone {
-        gap: 14px;
-    }
+  .phone {
+    gap: 14px;
+  }
 
-    .foot-1 p {
-        font-size: 16px;
-    }
+  .foot-1 p {
+    font-size: 11px;
+  }
 
-    .email {
-        gap: 14px;
-    }
+  .email {
+    gap: 14px;
+  }
 
-    .child-foot h3 {
-        font-size: 20px;
-        margin-bottom: 14px;
-    }
+  .child-foot h3 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
 
-    .location {
-        gap: 14px
-    }
+  .location {
+    gap: 14px;
+  }
 
-    .location p {
-        font-size: 16px;
-        line-height: 23px;
-    }
+  .location p {
+    font-size: 13px;
+    line-height: 23px;
+  }
 
-    .foot-images {
-        gap: 18px;
-    }
+  .foot-images {
+    gap: 18px;
+  }
 
-    .foot-images img {
-        max-width: 70px;
-    }
+  .foot-images img {
+    max-width: 70px;
+  }
 
-    .foot-1 {
-        gap: 29px;
-    }
+  .foot-1 {
+    gap: 29px;
+  }
 
-    .child-foot ul {
-        gap: 16px;
-    }
+  .child-foot ul {
+    gap: 16px;
+  }
 
-    .child-foot ul li a {
-        font-size: 16px;
-    }
+  .child-foot ul li a {
+    font-size: 13px;
+  }
 
-    .bottom-foot {
-        padding-top: 45px;
-    }
+  .bottom-foot {
+    padding-top: 45px;
+  }
 
-    .bottom-right-foot {
-        display: flex;
-        align-items: center;
-        gap: 19px;
-    }
+  .bottom-right-foot {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+  }
 
-    .bottom-right-foot p {
-        font-size: 16px;
-    }
+  .bottom-right-foot p {
+    font-size: 16px;
+  }
 
-    .foot-txt {
-        font-size: 18px;
-    }
+  .foot-txt {
+    font-size: 18px;
+  }
 
-    .fa-brands {
-        font-size: 24px;
-        padding: 12px;
-    } 
-
+  .fa-brands {
+    font-size: 24px;
+    padding: 12px;
+  }
     
 }
 
@@ -1202,121 +1200,121 @@ font-size: 15px;
 /* footer */
 
  .footer {
-        padding: 25px 0;
-    }
+    padding: 25px 0;
+  }
 
-    .footer-top {
-        margin-bottom: 30px;
-    }
+  .footer-top {
+    margin-bottom: 30px;
+  }
 
-    .footer-top h2 {
-        font-size: 25px;
-    }
+  .footer-top h2 {
+    font-size: 25px;
+  }
 
-    .footer-top p {
-        font-size: 14px;
-        margin-top: 15px;
-    }
+  .footer-top p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
 
-    .newsletter-form {
-        gap: 5px;
-        margin-top: 15px;
-    }
+  .newsletter-form {
+    gap: 5px;
+    margin-top: 15px;
+  }
 
-    .newsletter-form input {
-        padding: 15px 25px;
-    }
+  .newsletter-form input {
+    padding: 15px 25px;
+  }
 
-    .newsletter-form input::placeholder {
-        font-size: 12px;
-    }
+  .newsletter-form input::placeholder {
+    font-size: 12px;
+  }
 
-    .newsletter-form button {
-        padding: 12px 25px;
-        font-size: 14px;
-    }
+  .newsletter-form button {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
 
-    footer .row {
-        padding: 35px 0;
-    }
+  footer .row {
+    padding: 35px 0;
+  }
 
-    .phone {
-        gap: 12px;
-    }
+  .phone {
+    gap: 12px;
+  }
 
-    .foot-1 p {
-        font-size: 9px;
-    }
+  .foot-1 p {
+    font-size: 9px;
+    text-wrap: nowrap;
+  }
 
-    .email {
-        gap: 10px;
-    }
+  .email {
+    gap: 10px;
+  }
 
-    .col-25 {
-        width: 50%;
-    }
+  .col-25 {
+    width: 50%;
+  }
 
-    .child-foot h3 {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
+  .child-foot h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
 
-    .location {
-        gap: 10px
-    }
+  .location {
+    gap: 10px;
+  }
 
-    .location p {
-        font-size: 14px;
-        line-height: 20px;
-    }
+  .location p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 
-    .foot-images {
-        gap: 15px;
-    }
+  .foot-images {
+    gap: 15px;
+  }
 
-    .foot-images img {
-        max-width: 60px;
-    }
+  .foot-images img {
+    max-width: 60px;
+  }
 
-    .foot-1 {
-        gap: 20px;
-    }
+  .foot-1 {
+    gap: 20px;
+  }
 
-    .child-foot ul {
-        gap: 12px;
-    }
+  .child-foot ul {
+    gap: 12px;
+  }
 
-    .child-foot ul li a {
-        font-size: 14px;
-    }
+  .child-foot ul li a {
+    font-size: 14px;
+  }
 
-    .bottom-foot {
-        padding-top: 45px;
+  .bottom-foot {
+    padding-top: 45px;
+  }
 
-    }
+  .bottom-right-foot {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
 
-    .bottom-right-foot {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
+  .bottom-right-foot p {
+    font-size: 14px;
+  }
 
-    .bottom-right-foot p {
-        font-size: 14px;
-    }
+  .foot-txt {
+    font-size: 14px;
+  }
 
-    .foot-txt {
-        font-size: 14px;
-    }
+  .fa-brands {
+    font-size: 20px;
+    padding: 10px;
+  }
 
-    .fa-brands {
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    footer .row {
-        row-gap: 20px;
-    } 
+  footer .row {
+    row-gap: 20px;
+  }
 
     
 }
@@ -1455,58 +1453,62 @@ font-size: 15px;
   } 
   
   /* footer */
-  footer .row {
-        padding: 30px 0;
-        row-gap: 15px;
-        text-align: center;
-    }
+ footer .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 30px 0; */
+    /* row-gap: 15px; */
+    text-align: center;
+  }
 
-    .phone,
-    .email,
-    .location,
-    .foot-images,
-    .bottom-right-foot {
-        gap: 8px;
-    }
+  .phone,
+  .email,
+  .location,
+  .foot-images,
+  .bottom-right-foot {
+    gap: 8px;
+  }
 
-    .location {
-        justify-content: center;
-    }
+  .location {
+    justify-content: center;
+  }
 
-    .foot-images {
-        justify-content: space-evenly;
-    }
+  .foot-images {
+    justify-content: space-evenly;
+  }
 
-    .foot-images img,
-    .foot-1 img {
-        max-width: 35px;
-    }
+  .foot-images img,
+  .foot-1 img {
+    max-width: 35px;
+  }
 
-    .fa-brands {
-        font-size: 15px;
-        padding: 8px;
-    }
+  .fa-brands {
+    font-size: 15px;
+    padding: 8px;
+  }
 
-    .child-foot h3 {
-        font-size: 12px;
-        margin-bottom: 8px;
-    }
+  .child-foot h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
 
-    .child-foot ul {
-        gap: 10px;
-    }
+  .child-foot ul {
+    gap: 10px;
+  }
 
-    .bottom-foot {
-        padding-top: 35px;
-    }
+  .bottom-foot {
+    padding-top: 35px;
+  }
 
-    .foot-1 {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-    } 
+  .foot-1 {
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 18px;
+  }
 }
 
 @media screen and (max-width : 991px) {

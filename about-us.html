@@ -182,7 +182,7 @@
                 </div>
 
                 <div class="stat-card" data-target="96">
-                    <div class="stat-number" id="counter3">0<span style="font-size: 2rem;">%</span></div>
+                    <div class="stat-number" id="counter3">%</span></div>
                     <div class="stat-label">Client Satisfaction</div>
                     <div class="progress-bar">
                         <div class="progress-fill" id="progress3"></div>
@@ -221,11 +221,11 @@
                 }
 
                 if (suffix === 'K') {
-                    element.innerHTML = Math.floor(start / 1000) + '<span style="font-size: 2rem;">K</span>';
+                    element.innerHTML = Math.floor(start / 1000) + '<span style="font-size: ;">K</span>';
                 } else if (suffix === '%') {
-                    element.innerHTML = Math.floor(start) + '<span style="font-size: 2rem;">%</span>';
+                    element.innerHTML = Math.floor(start) + '<span style="font-size: ;">%</span>';
                 } else if (suffix === '+') {
-                    element.innerHTML = Math.floor(start) + '<span style="font-size: 2rem;">+</span>';
+                    element.innerHTML = Math.floor(start) + '<span style="font-size: ;">+</span>';
                 } else {
                     element.textContent = Math.floor(start).toLocaleString();
                 }
