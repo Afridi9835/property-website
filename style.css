@@ -1873,6 +1873,11 @@ footer .row {
       .text-section2 > p{
         font-size: 15px;
       }
+
+      .hamburger{
+        display: flex;
+        flex-direction: column;
+      }
 }
 
 @media screen and (max-width: 768px) {
