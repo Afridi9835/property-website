@@ -1327,6 +1327,9 @@ footer .row {
     .blog {
         padding: 50px 0;
     }
+    footer {
+      margin-top: 15px;
+    }
 }
 
 @media screen and (max-width : 576px) {
@@ -1363,5 +1366,9 @@ footer .row {
 }
     .blog .row {
         row-gap: 10px;
+    }
+
+    .footer {
+      margin-top: 10px;
     }
 }

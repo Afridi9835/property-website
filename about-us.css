@@ -1426,7 +1426,9 @@ footer .row {
 
 @media screen and ( max-width : 768px ){
 
-    
+    footer {
+    margin-top: 10px;
+  }
 /* section-4 */
 
   .stat-number {
@@ -1818,6 +1820,9 @@ font-size: 15px;
 
 
 @media screen and (max-width : 576px) {
+  .footer {
+    margin-top: 10px;
+  }
      .mobile-nav .contact-btn {
         font-size: 12px;
         padding: 13px 18px;

@@ -2189,6 +2189,9 @@ footer .row {
   .btn1 {
     display: none;
   }
+  footer {
+    margin-top: 20px;
+  }
 }
 
 /* .hamburger span{
@@ -2215,6 +2218,8 @@ footer .row {
 } */
 
 @media screen and (max-width: 576px) {
+
+  
   /* nav and banner */
   .nav-menu {
     display: none;
