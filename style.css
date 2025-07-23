@@ -1095,6 +1095,7 @@ span {
   padding: 0 20px;
 }
 
+
 .col-12 {
   width: 100%;
 }
@@ -1864,6 +1865,8 @@ footer .row {
     display: none;
   }
 
+  div::{ch
+
   /* .hamburger {
     display: flex;
   } */
@@ -1878,6 +1881,7 @@ footer .row {
         display: flex;
         flex-direction: column;
       }
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -2659,11 +2663,10 @@ footer .row {
 
 .carousel-slide.active.slide-2 {
   animation: kenBurns2 5s ease-out forwards;
-}
-/* 
-.carousel-slide.active.slide-3 {
+} 
+/* .carousel-slide.active.slide-3 {
   animation: kenBurns3 0s ease-out forwards;
-} */
+}  */
 
 .swiper-pagination {
   position: relative !important;
