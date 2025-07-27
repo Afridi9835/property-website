@@ -135,7 +135,7 @@ span {
   font-family:Syne ;
 }
 .contact-btn:hover {
-  background: #1b92d2;
+  background: darkgreen;
   transform: translateY(-2px);
 }
 
@@ -434,7 +434,7 @@ span {
 .cta-btn:hover {
   /* transform: translateY(-3px) scale(1.05);
   box-shadow: 0 12px 40px rgba(255, 107, 53, 0.4); */
-  background-color: #1b92d2;
+  background-color: darkgreen;
   transform: translateY(-2px);
 }
 
@@ -530,6 +530,11 @@ span {
   font-size: 15px;
   text-wrap: nowrap;
 }
+
+.view-btn1:hover{
+  background-color: darkgreen;
+   transform: translateY(-2px);
+}
 .col-60{
    padding: 0 15px; 
 }
@@ -542,6 +547,10 @@ span {
   font-weight: 600;
   font-size: 15px;
   text-wrap: nowrap;
+}
+.view-btn2:hover{
+  background-color: cornflowerblue;
+   transform: translateY(-2px);
 }
 .shower {
   max-width: 81px;
@@ -602,7 +611,10 @@ span {
   color: white;
   border-radius: 8px;
 }
-
+.btn:hover{
+  background-color: cornflowerblue;
+   transform: translateY(-2px);
+}
 /* section3 */
 .section-3 {
   margin-top: 75px;
@@ -918,6 +930,10 @@ span {
   border-radius: 8px;
   background-color: #122732;
   color: #ffffff;
+}
+.banner5-btn1:hover{
+  background-color: cornflowerblue;
+   transform: translateY(-2px);
 }
 
 .banner5-text1 > h4 {
